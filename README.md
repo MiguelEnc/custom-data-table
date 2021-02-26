@@ -1,5 +1,7 @@
 # Custom DataTable React Component
 
+![DataTable image](DataTable.png)
+
 &nbsp;
 
 ## How to Use:
