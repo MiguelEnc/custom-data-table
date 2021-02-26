@@ -1,16 +1,18 @@
 {
-  "name": "custom-data-table",
+  "name": "custom-material-datatable",
   "version": "1.0.0",
-  "author": {
-    "name": "Miguel Encarnacion",
-    "email": "miguelencarnacion7@gmail.com"
-  },
+  "author": "Miguel Encarnacion",
   "description": "Custom DataTable component from material-table.",
+  "main": "src/index.js",
   "keywords": [
     "datatable",
     "material",
     "react"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MiguelEnc/custom-data-table.git"
+  },
   "homepage": "https://github.com/MiguelEnc/custom-data-table#readme",
   "bugs": {
     "url": "https://github.com/MiguelEnc/custom-data-table/issues",
