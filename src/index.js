@@ -13,7 +13,7 @@ ReactDOM.render(
       editButton={true}
       deleteButton={true}
       expandPanel={true}
-      expandPanelFunction={expandPanelFunc}
+      panelFunction={expandPanelFunc}
     />
   </React.StrictMode>,
   document.getElementById("root")

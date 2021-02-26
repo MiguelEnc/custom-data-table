@@ -21,9 +21,7 @@ DataTable.propTypes = {
   editButton: PropTypes.bool,
   editFunction: PropTypes.func,
   expandPanel: PropTypes.bool,
-  expandPanelFunction: PropTypes.func,
-  pagination: PropTypes.bool,
-  searchBar: PropTypes.bool,
+  panelFunction: PropTypes.func,
 };
 
 export default function DataTable({
@@ -34,7 +32,7 @@ export default function DataTable({
   deleteButton,
   deleteFunction,
   expandPanel,
-  expandPanelFunction,
+  panelFunction,
 }) {
   const tableIcons = {
     Delete: forwardRef((props, ref) => <DeleteOutline {...props} ref={ref} />),
@@ -115,7 +113,7 @@ export default function DataTable({
     <div style={{ maxWidth: "100%" }}>
       <MaterialTable
         icons={tableIcons}
-        detailPanel={expandPanel ? expandPanelFunction : null}
+        detailPanel={expandPanel ? panelFunction : null}
         localization={localization}
         actions={actions}
         options={options}
@@ -130,11 +128,9 @@ DataTable.defaultProps = {
   columns: [],
   data: [],
   expandPanel: false,
-  expandPanelFunction: (rowData) => <div>Panel content</div>,
+  panelFunction: (rowData) => <div>Panel content</div>,
   editButton: false,
-  editFunction: () => console.log("Edit button clicked"),
+  editFunction: (event, rowData) => console.log("Edit button clicked"),
   deleteButton: false,
-  deleteFunction: () => console.log("Delete button clicked"),
-  pagination: true,
-  searchBar: true,
+  deleteFunction: (event, rowData) => console.log("Delete button clicked"),
 };
